@@ -12,4 +12,11 @@ class PostController extends Controller
 
         return view('posts.index',compact('products'));
     }   
+
+    public function show($id) {
+      
+        $products = Product::find($id);
+
+        return view('posts.show', compact('products'));
+    }
 }
